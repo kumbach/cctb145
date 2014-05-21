@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "programflow1", "programflow1\programflow1.csproj", "{A0FD1F8B-32CC-4A22-B94F-655E66670FEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0FD1F8B-32CC-4A22-B94F-655E66670FEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0FD1F8B-32CC-4A22-B94F-655E66670FEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0FD1F8B-32CC-4A22-B94F-655E66670FEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0FD1F8B-32CC-4A22-B94F-655E66670FEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

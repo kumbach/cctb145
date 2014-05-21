@@ -11,19 +11,19 @@ namespace assignment3
     static void Main(string[] args)
     {
       Console.Write("Enter a number between 1 and 100 : ");
-      string enteredNumber = Console.ReadLine();
-      int number = Convert.ToInt32(enteredNumber);
+      string numberEntry = Console.ReadLine();
+      int enteredNumber = int.Parse(numberEntry);
 
-      if (number >= 1 && number <= 100)
+      if (enteredNumber >= 1 && enteredNumber <= 100)
       {
         int evenNumberTotal = 0;
-        for (int currentNumber = 1; currentNumber <= number; ++currentNumber)
+        for (int currentNumber = 1; currentNumber <= enteredNumber; ++currentNumber)
         {
           if (IsEvenNumber(currentNumber))
           {
             evenNumberTotal += currentNumber;
             Console.Write(currentNumber);
-            if (currentNumber < number)
+            if (currentNumber < enteredNumber)
             {
               Console.Write(" + ");
             }
@@ -36,7 +36,7 @@ namespace assignment3
         }
         else
         {
-          Console.WriteLine("There are no even numbers between 1 and " + number);
+          Console.WriteLine("There are no even numbers between 1 and " + enteredNumber);
         }
       }
       else
