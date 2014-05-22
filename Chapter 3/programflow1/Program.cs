@@ -17,7 +17,7 @@ namespace programflow1
 
     public void IfStatementSample()
     {
-      Console.WriteLine("If Statement Sample....");
+      Console.WriteLine("If Statement Sample...");
 
       Console.Write("Enter your age: ");
       string stringAge = Console.ReadLine();
