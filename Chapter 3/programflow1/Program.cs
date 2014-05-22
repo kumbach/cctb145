@@ -11,6 +11,9 @@ namespace programflow1
     static void Main(string[] args)
     {
       Program myApp = new Program();
+      Color color = Enum.Parse(Color, Console.ReadLine(), true);
+      myApp.EnumSample(color);
+
       myApp.IfStatementSample();
       myApp.ForStatementSample();
       myApp.WhileStatementSamples();
@@ -20,11 +23,30 @@ namespace programflow1
       someNumber = int.Parse(Console.ReadLine());
       myApp.ListDivisibleBy(someNumber);
 
-
       Console.Write("\nPress [ENTER] to exit.");
       Console.ReadLine();
     }
 
+    private void EnumSample(Color favoriteColor)
+    {
+      Console.WriteLine("Sample Enumeration...");
+      
+      switch (favoriteColor)
+      {
+        case Color.Red:
+          Console.WriteLine("Your color is red.");
+          break;
+        case Color.Blue:
+          Console.WriteLine("Your color is blue.");
+          break;
+        case Color.Green:
+          Console.WriteLine("Your color is green.");
+          break;
+        default:
+          Console.WriteLine("You entered a different color: " + favoriteColor);
+          break;
+      }
+    }
     private void ListDivisibleBy(int divisor)
     {
       Console.WriteLine("List all the numbers from 1 to 100 that are divisible by {0}", divisor);
