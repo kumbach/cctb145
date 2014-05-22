@@ -38,5 +38,11 @@ namespace assignment6
       Students.Add(student);
     }
 
+    public void DisplaySummary()
+    {
+      Console.WriteLine("Course Key: {0}", CourseKey);
+      Console.WriteLine("Name: {0}", CourseName);
+      Console.WriteLine("Students: {0}", TotalStudents);
+    }
   }
 }

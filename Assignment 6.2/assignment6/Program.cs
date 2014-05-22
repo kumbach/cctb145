@@ -12,22 +12,10 @@ namespace assignment6
     {
       List<Course> courses = new List<Course>();
       AddCoursesToList(courses);
-      
-      Dictionary<string, Course> courseDictionary = new Dictionary<string, Course>();
-      foreach (Course course in courses)
-      {
-        courseDictionary.Add(course.CourseKey, course);
-      }
+      Dictionary<string, Course> courseDictionary = MakeCourseDictionary(courses);
 
-      Course lookupCourse = courseDictionary["CCTP152"];
-      Console.WriteLine("Course Key: {0}", lookupCourse.CourseKey);
-      Console.WriteLine("Name: {0}", lookupCourse.CourseName);
-      Console.WriteLine("Students: {0}", lookupCourse.TotalStudents);
-
-      lookupCourse = courseDictionary["CCTP150"];
-      Console.WriteLine("Course Key: {0}", lookupCourse.CourseKey);
-      Console.WriteLine("Name: {0}", lookupCourse.CourseName);
-      Console.WriteLine("Students: {0}", lookupCourse.TotalStudents);
+      courseDictionary["CCTP152"].DisplaySummary();
+      courseDictionary["CCTP150"].DisplaySummary();
 
     }
 
@@ -45,9 +33,19 @@ namespace assignment6
       courses.Add(course);
 
       course = new Course(3, "CCTP154", "C# Advanced Programming");
-      course.AddStudent(new Student(6, "Tom", 45, false));
-      course.AddStudent(new Student(7, "Sue", 90, true));
+      course.AddStudent(new Student(6, "Tom", 33, true));
+      course.AddStudent(new Student(7, "Sue", 78, false));
       courses.Add(course);
+    }
+
+    private static Dictionary<string, Course> MakeCourseDictionary(List<Course> courses)
+    {
+      Dictionary<string, Course> courseDictionary = new Dictionary<string, Course>();
+      foreach (Course course in courses)
+      {
+        courseDictionary.Add(course.CourseKey, course);
+      }
+      return courseDictionary;
     }
   }
 }
