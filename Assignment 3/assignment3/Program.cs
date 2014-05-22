@@ -23,7 +23,7 @@ namespace assignment3
           {
             evenNumberTotal += currentNumber;
             Console.Write(currentNumber);
-            if (currentNumber < enteredNumber)
+            if (currentNumber <= enteredNumber - 2)
             {
               Console.Write(" + ");
             }
